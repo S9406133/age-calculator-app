@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+
+<body>
+  <div class="bground">
+
+    <div class="outer">
+      <div class="input-section">
+        <div class="input-wrapper">
+          <label for="day-input">DAY</label>
+          <input type="number" name="day" id="day-input" placeholder="DD" min="1" max="31">
+          <span id="day-error" class="input-error"></span>
+        </div>
+        <div class="input-wrapper">
+          <label for="month-input">MONTH</label>
+          <input type="number" name="month" id="month-input" placeholder="MM" min="1" max="12">
+          <span id="month-error" class="input-error"></span>
+        </div>
+        <div class="input-wrapper">
+          <label for="year-input">YEAR</label>
+          <input type="number" name="year" id="year-input" placeholder="YYYY" min="1000" max="2050">
+          <span id="year-error" class="input-error"></span>
+        </div>
+
+        <button type="button" id="input-btn">
+          <img width="80px" src="assets/images/icon-arrow.svg" alt="icon-arrow">
+        </button>
+      </div>
+
+      <div class="output-section">
+        <div>
+          <span id="years-output" class="output-number">-</span> years
+        </div>
+        <div>
+          <span id="months-output" class="output-number">-</span> months
+        </div>
+        <div>
+          <span id="days-output" class="output-number">-</span> days
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Simon Mckindley</a>.
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-XBold-Italic;
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+body {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+
+    --section-padding: 3rem;
+
+    margin: 0;
+    font-size: 1rem;
+}
+
+.bground {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--off-white);
+}
+
+.outer {
+    overflow: hidden;
+    width: clamp(10rem, 55rem, calc(100vw - 8em));
+    padding: 3em;
+    background-color: var(--white);
+    border-radius: 1rem 1rem 10rem 1rem;
+}
+
+/* Input sectiom */
+.input-section {
+    --_label-color: var(--smokey-grey);
+    --_border-color: var(--light-grey);
+    position: relative;
+    display: flex;
+    column-gap: 2em;
+    padding-bottom: var(--section-padding);
+    border-bottom: thin solid var(--light-grey);
+}
+
+.error-status {
+    --_label-color: var(--light-red);
+    --_border-color: var(--light-red);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.input-wrapper label {
+    font-family: "Poppins-Regular", sans-serif;
+    color: var(--_label-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+}
+
+.input-wrapper input {
+    font-family: "Poppins-Bold", sans-serif;
+    font-size: 2em;
+    width: 4em;
+    padding: 0.5em 1em;
+    border: 1px solid var(--_border-color);
+    border-radius: 5px;
+    outline-color: var(--smokey-grey);
+}
+
+.input-wrapper input:hover {
+    outline: 3px solid var(--smokey-grey);
+    outline-offset: -3px;
+}
+
+.input-error {
+    position: absolute;
+    top: 103%;
+    font-family: "Poppins-Regular", sans-serif;
+    color: var(--light-red);
+    font-style: italic;
+}
+
+/* Button */
+#input-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    translate: 0 50%;
+    width: 7em;
+    aspect-ratio: 1/1;
+    padding: 1.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--purple);
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+#input-btn:hover {
+    background-color: var(--off-black);
+}
+
+#input-btn img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Output section */
+.output-section {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins-XBold-Italic", sans-serif;
+    font-size: 5em;
+    line-height: 1.1;
+    margin-top: var(--section-padding);
+}
+
+.output-number {
+    color: var(--purple);
+}
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 850px) {
+    body {
+        --section-padding: 6rem;
+    }
+
+    #input-btn {
+        position: absolute;
+        right: 50%;
+        translate: 50% 50%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        --section-padding: 5rem;
+        font-size: 0.6rem;
+    }
+
+    .outer {
+        padding-block: 5em;
+    }
+
+    .input-wrapper input {
+        width: 2.5em;
+    }
+
+    #input-btn {
+        width: 5em;
+        padding: 1em;
+    }
+}
